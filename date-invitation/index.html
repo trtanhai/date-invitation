@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f5">
+
+  <title>A sweet little invitation for Lan Vy 💌</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="background-hearts" aria-hidden="true">
+    <span>♡</span>
+    <span>♥</span>
+    <span>♡</span>
+    <span>♥</span>
+    <span>♡</span>
+    <span>♥</span>
+  </div>
+
+  <main class="page">
+    <section class="invitation-card">
+
+      <div class="top-label">A LITTLE INVITATION FOR YOU</div>
+
+      <div class="small-flower">🌷</div>
+
+      <h1>Gửi bà Lan Vy</h1>
+
+      <p class="subtitle">
+        Có một lời mời nhỏ dành cho bà...
+      </p>
+
+      <div class="envelope-area">
+        <button
+          type="button"
+          class="envelope"
+          id="openLetter"
+          aria-label="Mở phong bì"
+        >
+          <span class="envelope-back"></span>
+          <span class="letter-preview">
+            <span>💌</span>
+            <small>A letter for you</small>
+          </span>
+          <span class="envelope-flap"></span>
+          <span class="envelope-front"></span>
+          <span class="envelope-heart">♥</span>
+        </button>
+      </div>
+
+      <p class="tap-hint" id="tapHint">
+        Chạm vào phong bì để mở thư nha!
+      </p>
+
+      <section class="letter-content" id="letterContent" hidden>
+        <div class="letter-decoration">✿ ✿ ✿</div>
+
+        <p class="letter-greeting">Hello bà,</p>
+
+        <p class="letter-message">
+          Tui muốn mời bà đi một buổi hẹn thật vui,
+          cùng trò chuyện và hiểu nhau hơn một chút..
+        </p>
+
+        <div class="date-details">
+          <div class="detail-row">
+            <span>📅</span>
+            <div>
+              <strong>Thời gian</strong>
+              <p>Thứ 7 ngày 14/11</p>
+            </div>
+          </div>
+
+          <div class="detail-row">
+            <span>📍</span>
+            <div>
+              <strong>Địa điểm</strong>
+              <p>Thiba | Quán cafe không gian cháy máy ( may be :D )</p>
+            </div>
+          </div>
+
+          <div class="detail-row">
+            <span>🌷</span>
+            <div>
+              <strong>Người gửi</strong>
+              <p>Hải</p>
+            </div>
+          </div>
+        </div>
+
+        <label class="note-label" for="responseNote">
+          Bà có muốn nhắn gì cho tui không? Nếu bà cảm thấy không phù hợp thì gợi ý nhỏ cho tui nha (không bắt buộc)
+        </label>
+
+        <textarea
+          id="responseNote"
+          maxlength="300"
+          placeholder="Viết vài dòng ở đây nhé..."
+          rows="3"
+        ></textarea>
+
+        <p class="response-question">
+          Vậy... bà đồng ý chứ? 💗
+        </p>
+
+        <div class="response-buttons">
+          <button
+            type="button"
+            class="yes-button"
+            data-answer="yes"
+          >
+            Đi chứ, chốt kèo! 💖
+          </button>
+
+          <button
+            type="button"
+            class="maybe-button"
+            data-answer="maybe"
+          >
+            Để tui xem lịch nha 🌸
+          </button>
+        </div>
+
+        <p
+          class="status-message"
+          id="statusMessage"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </section>
+
+      <div class="music-control">
+        <button type="button" id="musicButton">
+          🎵 Bật nhạc
+        </button>
+        <span id="musicStatus">Một chút nhạc nhẹ nhé</span>
+      </div>
+
+      <footer>
+        Made with ♡ by Hải
+      </footer>
+
+    </section>
+  </main>
+
+  <audio id="backgroundMusic" loop>
+    <source src="assets/music/background.mp3" type="audio/mpeg">
+  </audio>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
